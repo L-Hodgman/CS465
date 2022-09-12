@@ -1,0 +1,20 @@
+[
+    {
+        "name": "SeaFood Special",
+        "image": "seafoods.jpg",
+        "item": "Fried Salmon Special",
+        "description": "Delicious fresh caught salmon fried and topped with an herb butter"
+    },
+    {
+        "name": "Sumptuous Desserts",
+        "image": "desserts.jpg",
+        "item": "Choco Ice Cream Sandwich",
+        "description": "Soft vanilla bean icecream inbetween two freshly baked chocolate fudge cookies"
+    },
+    {
+        "name": "Buffet",
+        "image": "buffet.jpg",
+        "item": "Mixed Buffet",
+        "description": "All you can eat!!!"
+    }
+]
