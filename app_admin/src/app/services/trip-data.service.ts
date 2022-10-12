@@ -5,7 +5,6 @@ import { AuthResponse } from '../models/authresponse';
 import { BROWSER_STORAGE } from '../storage';
 import { Trip } from '../models/trip';
 import { User } from '../models/user';
-import { $ } from 'protractor';
 
 @Injectable()
 export class TripDataService {
