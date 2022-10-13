@@ -5,8 +5,9 @@ import { AuthResponse } from '../models/authresponse';
 import { TripDataService } from '../services/trip-data.service';
 
 @Injectable({
-    providedIn: 'root'
+   providedIn: 'root'
 })
+
 export class AuthenticationService {
 
     constructor(

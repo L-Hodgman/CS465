@@ -29,6 +29,11 @@ export class TripListingComponent implements OnInit {
     this.router.navigate(['add-trip']);
   }
 
+  private deleteTrip(): void {
+    console.log('Inside TripListingComponent#deleteTrip');
+    this.router.navigate(['delete-trip']);
+  }
+
   private getTrips(): void {
     console.log('Inside TripListingComponent#getTrips');
     this.message = 'Searching for trips';
