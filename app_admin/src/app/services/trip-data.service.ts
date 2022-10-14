@@ -15,25 +15,29 @@ export class TripDataService {
 
   private apiBaseUrl = 'http://localhost:3000/api/';
   private tripUrl = `${this.apiBaseUrl}trips/`;
-  private httpOptions = {
-    headers: new HttpHeaders({
-    'Authorization': `Bearer ${this.storage.getItem('travlr-token')}` })
-    };
 
   public addTrip(formData: Trip): Promise<Trip> {
     console.log('Inside TripDataService#addTrip');
+    const httpOptions = {
+      headers: new HttpHeaders({
+      'Authorization': `Bearer ${this.storage.getItem('travlr-token')}` })
+      };
     return this.http
-      .post(this.tripUrl, formData, this.httpOptions) // pass form data in request body
+      .post(this.tripUrl, formData, httpOptions) // pass form data in request body
       .toPromise()
       .then(response => response as Trip[])
       .catch(this.handleError);
   }
 
   public deleteTrip(formData: Trip): Promise<Trip> {
-    console.log('Inside TripDataService#updateTrip');
+    console.log('Inside TripDataService#deleteTrip');
     console.log(formData);
+    const httpOptions = {
+      headers: new HttpHeaders({
+      'Authorization': `Bearer ${this.storage.getItem('travlr-token')}` })
+      };
     return this.http
-      .delete(this.tripUrl + formData.code, this.httpOptions)
+      .delete(this.tripUrl + formData.code, httpOptions)
       .toPromise()
       .then(response => response as Trip[])
       .catch(this.handleError);
@@ -60,8 +64,12 @@ export class TripDataService {
   public updateTrip(formData: Trip): Promise<Trip> {
     console.log('Inside TripDataService#updateTrip');
     console.log(formData);
+    const httpOptions = {
+      headers: new HttpHeaders({
+      'Authorization': `Bearer ${this.storage.getItem('travlr-token')}` })
+      };
     return this.http
-      .put(this.tripUrl + formData.code, formData, this.httpOptions)
+      .put(this.tripUrl + formData.code, formData, httpOptions)
       .toPromise()
       .then(response => response as Trip[])
       .catch(this.handleError);
