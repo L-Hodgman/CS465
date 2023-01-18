@@ -1,7 +1,7 @@
 # CS465
 SNHU CS-465: Full Stack Development I
 
-Final Application - Branch: Module7
+Final Application - Branch: module7
 
 Architecture:
 
